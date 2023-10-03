@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int[] array = {};
+        Stack stack = new Stack(array);
+        Queue queue = new Queue(array);
     }
 }
