@@ -25,8 +25,7 @@ public class Stack {
     /**
      * pushes an element onto the stack
      *
-     * @param element
-     * @return an array with the pushed element
+     * @param element return an array with the pushed element
      */
     public int[] push(int element){
 
