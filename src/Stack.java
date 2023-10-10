@@ -48,13 +48,22 @@ public class Stack {
 
     public int[] pop(){
 
-        // creates an array that's one smaller than the current stack
 
-        int[] popped_array = new int[stack.length - 1];
+        // if stack length is 0 it will throw exception instead of index error
 
-        // copies the current stack onto the popped_array with the stack index being 1
-        System.arraycopy(stack, 1, popped_array, 0, popped_array.length);
-        return popped_array;
+        if (stack.length == 0){
+            throw new EmptyStackException();
+
+        } else {
+
+            // creates an array that's one smaller than the current stack
+            int[] popped_array = new int[stack.length - 1];
+
+            // copies the current stack onto the popped_array with the stack index being 1
+            System.arraycopy(stack, 1, popped_array, 0, popped_array.length);
+            return popped_array;
+
+        }
     }
 
     /**

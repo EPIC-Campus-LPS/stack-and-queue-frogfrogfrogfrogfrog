@@ -3,5 +3,7 @@ public class Main {
         int[] array = {};
         Stack stack = new Stack(array);
         Queue queue = new Queue(array);
+
+        queue.remove();
     }
 }

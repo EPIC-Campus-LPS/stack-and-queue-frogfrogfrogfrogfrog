@@ -39,9 +39,20 @@ public class Queue {
      * @return an array with the removed element
      */
     public int[] remove(){
-        int[] removed_array = new int[queue.length - 1];
-        System.arraycopy(queue, 0, removed_array, 0, removed_array.length);
-        return removed_array;
+
+        // throws an exception if the length is 0
+        if (queue.length == 0){
+            throw new NoSuchElementException();
+
+
+        } else {
+
+            // creates a copy of the queue that's one less than the current queue
+            int[] removed_array = new int[queue.length - 1];
+            System.arraycopy(queue, 0, removed_array, 0, removed_array.length);
+            return removed_array;
+
+        }
     }
 
     /**
