@@ -66,7 +66,7 @@ public class Queue {
 
 
             // creates a copy of the queue that's one less than the current queue
-            int[] removed_array = new int[queue.length - 1];
+            int[] removed_array = new int[0];
             System.arraycopy(queue, 0, removed_array, 0, removed_array.length);
 
 
