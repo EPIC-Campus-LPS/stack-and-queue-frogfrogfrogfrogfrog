@@ -58,13 +58,9 @@ public class Queue {
      */
     public int[] remove(){
 
-
         // throws an exception if the length is 0
         if (queue.length == 0){
             throw new NoSuchElementException();
-
-
-
 
         } else {
 
@@ -77,7 +73,6 @@ public class Queue {
             //updates the queue and returns it
             queue = removed_array;
             return removed_array;
-
 
         }
     }
@@ -95,7 +90,7 @@ public class Queue {
         if (queue.length == 0) {
             throw new NoSuchElementException();
         } else {
-            return queue[queue.length - 1];
+            return queue[0];
         }
     }
 
