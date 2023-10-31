@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 
@@ -58,21 +59,26 @@ public class Queue {
      */
     public int[] remove(){
 
+
         // throws an exception if the length is 0
         if (queue.length == 0){
+
+
             throw new NoSuchElementException();
+
 
         } else {
 
 
             // creates a copy of the queue that's one less than the current queue
-            int[] removed_array = new int[0];
-            System.arraycopy(queue, 0, removed_array, 0, removed_array.length);
+            int[] removed_array = new int[queue.length - 1];
+            System.arraycopy(queue, 1, removed_array, 0, removed_array.length);
 
 
             //updates the queue and returns it
             queue = removed_array;
             return removed_array;
+
 
         }
     }
@@ -114,6 +120,11 @@ public class Queue {
      */
     public boolean isEmpty() {
         return (queue.length == 0);
+    }
+
+
+    public String print(){
+        return Arrays.toString(queue);
     }
 }
 
